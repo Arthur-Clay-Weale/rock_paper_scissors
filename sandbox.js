@@ -5,6 +5,19 @@ const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
 
+rock.addEventListener("click", () => {
+    const computerChoice = getComputerChoice();
+    playRound("rock", computerChoice);
+})
+paper.addEventListener("click", () => {
+    const computerChoice = getComputerChoice();
+    playRound("paper", computerChoice);
+})
+scissors.addEventListener("click", () => {
+    const computerChoice = getComputerChoice();
+    playRound("scissors", computerChoice);
+})
+
 function getComputerChoice(){
 
     let randomNum = Math.floor(Math.random() * 3);
@@ -19,7 +32,7 @@ function getComputerChoice(){
 }
 
 function getHumanChoice(){
-    return prompt('Rock, Paper, Scissors: ').toLowerCase()
+    return prompt('Rock, Paper, Scissors: ').toLowerCase();
 }
 
 function playGame(){
@@ -27,7 +40,7 @@ function playGame(){
 let humanScore = 0;
 let computerScore= 0;
 
-for(i= 0; i < 5; i++){
+//for(i= 0; i < 5; i++){
 
     function playRound(){
 
@@ -42,26 +55,26 @@ for(i= 0; i < 5; i++){
     }
 }
 
-const humanSelection = getHumanChoice()
-const computerSelection = getComputerChoice()
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection)
-console.log(`Human Score = ${humanScore}`)
-console.log(`Computer Score = ${computerScore}`)
+playRound(humanSelection, computerSelection);
+console.log(`Human Score = ${humanScore}`);
+console.log(`Computer Score = ${computerScore}`);
 }
 
 function finalUpdate(){
     
     console.log('Final Scoreboard\n')
-    console.log(`Human Score = ${humanScore}`)
-    console.log(`Computer Score = ${computerScore}`)
+    console.log(`Human Score = ${humanScore}`);
+    console.log(`Computer Score = ${computerScore}`);
 
     if (humanScore > computerScore){
-        console.log('You beat the computer! You are a Boss')
-    }else console.log('The Computer beat you. Better luck next time!')
+        console.log('You beat the computer! You are a Boss');
+    }else console.log('The Computer beat you. Better luck next time!');
 }
 
-finalUpdate()
-}
-playGame()
+finalUpdate();
+//}
+playGame();
 
