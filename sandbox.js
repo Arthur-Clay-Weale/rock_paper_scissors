@@ -1,9 +1,5 @@
 
 
-const rock = document.querySelector("#rock");
-const paper = document.querySelector("#paper");
-const scissors = document.querySelector("#scissors");
-
 
 
 function getComputerChoice(){
@@ -28,7 +24,7 @@ function playGame(){
 let humanScore = 0;
 let computerScore= 0;
 
-//for(i= 0; i < 5; i++){
+for(i= 0; i < 5; i++){
 
     function playRound(humanChoice, computerChoice){
 
@@ -63,6 +59,6 @@ function finalUpdate(){
 }
 
 finalUpdate()
-//}
+}
 playGame()
 
