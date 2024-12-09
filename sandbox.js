@@ -1,6 +1,9 @@
 
 
-
+const newDiv = document.createElement("div");
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
 
 function getComputerChoice(){
 
@@ -26,7 +29,7 @@ let computerScore= 0;
 
 for(i= 0; i < 5; i++){
 
-    function playRound(humanChoice, computerChoice){
+    function playRound(){
 
         if (humanSelection == 'rock' && computerSelection == 'rock'){
             console.log('Its a Tie');
