@@ -24,20 +24,20 @@ function playGame(){
 let humanScore = 0;
 let computerScore= 0;
 
-for(i= 0; i < 5; i++){
+// for(i= 0; i < 5; i++){
 
-    function playRound(humanChoice, computerChoice){
+//     function playRound(humanChoice, computerChoice){
 
-        if (humanSelection == 'rock' && computerSelection == 'rock'){
-            console.log('Its a Tie');
-        }else if((humanSelection == 'rock' && computerSelection == 'scissors') || (humanSelection == 'scissors' && computerSelection == 'paper') || (humanSelection == 'paper' && computerSelection == 'rock')){
-            humanScore += 1;
-            console.log(`You Win! ${humanSelection} beats ${computerSelection}`);
-        }else if((humanSelection == 'scissors' && computerSelection == 'rock') || (humanSelection == 'paper' && computerSelection == 'scissors' ) || ( humanSelection == 'rock' && computerSelection == 'paper' )){
-            computerScore += 1;
-            console.log(`Computer Wins! ${computerSelection} beats ${humanSelection}`);
-    }
-}
+//         if (humanSelection == 'rock' && computerSelection == 'rock'){
+//             console.log('Its a Tie');
+//         }else if((humanSelection == 'rock' && computerSelection == 'scissors') || (humanSelection == 'scissors' && computerSelection == 'paper') || (humanSelection == 'paper' && computerSelection == 'rock')){
+//             humanScore += 1;
+//             console.log(`You Win! ${humanSelection} beats ${computerSelection}`);
+//         }else if((humanSelection == 'scissors' && computerSelection == 'rock') || (humanSelection == 'paper' && computerSelection == 'scissors' ) || ( humanSelection == 'rock' && computerSelection == 'paper' )){
+//             computerScore += 1;
+//             console.log(`Computer Wins! ${computerSelection} beats ${humanSelection}`);
+//     }
+// }
 
 const humanSelection = getHumanChoice()
 const computerSelection = getComputerChoice()
@@ -59,6 +59,6 @@ function finalUpdate(){
 }
 
 finalUpdate()
-}
+//}
 playGame()
 
