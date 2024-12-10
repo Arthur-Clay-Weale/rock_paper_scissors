@@ -34,6 +34,7 @@ function playGame() {
     }
 runningScore();
 }
+
     rock.addEventListener("click", () => {
         const computerChoice = getComputerChoice();
         playRound("rock", computerChoice);
@@ -46,13 +47,12 @@ runningScore();
         const computerChoice = getComputerChoice();
         playRound("scissors", computerChoice);
     })
-    
 
 function runningScore(){
     console.log('Running Score');
     console.log(`Human Score = ${humanScore}`);
     console.log(`Computer Score = ${computerScore}`);
-    
+
     if (humanScore === 5){
         console.log('You beat the computer! You are a Boss');
         finalUpdate();
@@ -61,8 +61,6 @@ function runningScore(){
         finalUpdate();
     }
     }
-
-    
 }
 playGame();
 
@@ -72,50 +70,3 @@ function finalUpdate(){
     console.log(`Human Score = ${humanScore}`);
     console.log(`Computer Score = ${computerScore}`);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function finalUpdate(){
-    
-//     console.log('Final Scoreboard\n')
-//     console.log(`Human Score = ${humanScore}`);
-//     console.log(`Computer Score = ${computerScore}`);
-
-//     if (humanScore === 5){
-//         console.log('You beat the computer! You are a Boss');
-//         finalUpdate();
-//     }else if(computerScore === 5){
-//         console.log('The Computer beat you. Better luck next time!');
-//         finalUpdate();
-//     }
-// }
