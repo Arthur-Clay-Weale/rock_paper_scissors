@@ -1,9 +1,10 @@
 
-
+const mainDiv = document.querySelector(".main_div")
 const newDiv = document.createElement("div");
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
+mainDiv.appendChild(newDiv);
 
 function getComputerChoice(){
 
@@ -34,7 +35,6 @@ function playGame() {
     }
 runningScore();
 }
-
     rock.addEventListener("click", () => {
         const computerChoice = getComputerChoice();
         playRound("rock", computerChoice);
@@ -49,9 +49,9 @@ runningScore();
     })
 
 function runningScore(){
-    console.log('Running Score');
-    console.log(`Human Score = ${humanScore}`);
-    console.log(`Computer Score = ${computerScore}`);
+    newDiv.innerHTML = `Running Score<br> Human Score = ${humanScore}<br>Computer Score = ${computerScore}`;
+    //newDiv.textContent = ;
+    //newDiv.textContent = ;
 
     if (humanScore === 5){
         console.log('You beat the computer! You are a Boss');
