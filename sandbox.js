@@ -4,7 +4,9 @@ const newDiv = document.createElement("div");
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
+const paragraph = document.createElement("p");
 mainDiv.appendChild(newDiv);
+mainDiv.appendChild(paragraph);
 
 function getComputerChoice(){
 
@@ -53,10 +55,12 @@ function runningScore(){
 
     if (humanScore === 5){
         console.log('You beat the computer! You are a Boss');
+        paragraph.textContent = 'You beat the computer! You are a Boss';
 
         finalUpdate();
     }else if(computerScore === 5){
         console.log('The Computer beat you. Better luck next time!');
+        paragraph.textContent = 'The Computer beat you. Better luck next time!';
         finalUpdate();
     }
     }
