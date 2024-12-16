@@ -50,11 +50,10 @@ runningScore();
 
 function runningScore(){
     newDiv.innerHTML = `Running Score<br> Human Score = ${humanScore}<br>Computer Score = ${computerScore}`;
-    //newDiv.textContent = ;
-    //newDiv.textContent = ;
 
     if (humanScore === 5){
         console.log('You beat the computer! You are a Boss');
+
         finalUpdate();
     }else if(computerScore === 5){
         console.log('The Computer beat you. Better luck next time!');
@@ -69,4 +68,6 @@ function finalUpdate(){
     console.log('Final Scoreboard\n')
     console.log(`Human Score = ${humanScore}`);
     console.log(`Computer Score = ${computerScore}`);
+
+    newDiv.innerHTML = '<b>Final Scoreboard</b>' + '<br>' + 'Human Score ='  +humanScore+ '<br>' + 'computerScore ='  + computerScore ;
 }
